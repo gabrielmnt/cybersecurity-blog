@@ -1,0 +1,72 @@
+
+/* Default formatting */
+.photo {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.photo img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* SOC Monitoring Lab */
+#SCRinterface img {
+  height: 300px;
+}
+
+#EventViewer {
+  height: 500px;
+}
+
+#outputs {
+  height: 580px;
+}
+
+#MainEvents {
+  height: 580px;
+}
+
+#EventsbyCount {
+  height: 500px;
+}
+
+#ProcessbyUser {
+  height: 550px;
+}
+
+#Dashboards {
+  height: 500px;
+}
+
+
+/* SOC N1 */
+#FailedAuthentication {
+  height: 350px;
+}
+
+#HPDCreated {
+  height: 500px;
+}
+
+#HPDUser {
+  height: 350px;
+}
+
+#HPDAdmin {
+  height: 350px;
+}
+
+#HPDAdmin {
+  height: 320px;
+}
+
+#Timeline {
+  height: 400px;
+}
+
+#Dashboards {
+  height: 600px;
+}

@@ -1,0 +1,11 @@
+.diagram {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.diagram img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}

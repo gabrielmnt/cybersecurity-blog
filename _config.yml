@@ -1,0 +1,23 @@
+title: "Gabriel Monteiro"
+tagline: "Blog sobre Cybersecurity"
+description: "Um espaço dedicado ao aprendizado e à prática em cibersegurança. Compartilho projetos, experiências e conhecimentos adquiridos ao longo da minha jornada, transformando estudos em prática e buscando contribuir com quem também deseja explorar o universo da segurança digital."
+baseurl: "/cybersecurity-blog"
+url: "https://gabrielmnt.github.io"
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+permalink: /posts/:title/
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules

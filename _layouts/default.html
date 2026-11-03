@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} · {{ site.title }}{% else %}{{ site.title }} — {{ site.tagline }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/diagrams.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/photos.css' | relative_url }}">
+
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a class="nav-logo" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <ul class="nav-links">
+        <li><a href="{{ '/' | relative_url }}">Home</a></li>
+        <li><a href="{{ '/posts/' | relative_url }}">Posts</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      {{ site.title }} &mdash; <span>{{ site.tagline }}</span> &mdash; {{ "now" | date: "%Y" }}
+    </div>
+  </footer>
+
+</body>
+</html>

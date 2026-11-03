@@ -1,0 +1,48 @@
+---
+layout: default
+title: Todos os posts
+permalink: /posts/
+---
+
+<div style="padding: 3rem 0 5rem;">
+  <div class="container">
+
+    <div class="section-header">
+      <span class="section-tag">Arquivo</span>
+      <span class="section-line"></span>
+    </div>
+
+    <h2 class="section-title">Todos os artigos</h2>
+
+    {% if site.posts.size > 0 %}
+    <div class="posts-list">
+      {% for post in site.posts %}
+      <article class="post-card">
+        <div>
+          <div class="post-meta">
+            <span class="post-date">{{ post.date | date: "%d %b %Y" }}</span>
+            {% if post.tags and post.tags.size > 0 %}
+            <div class="post-tags">
+              {% for tag in post.tags limit:3 %}
+              <span class="post-tag">{{ tag }}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          {% if post.excerpt %}
+          <p class="post-excerpt">{{ post.excerpt | strip_html | truncate: 160 }}</p>
+          {% endif %}
+        </div>
+        <span class="post-arrow">→</span>
+      </article>
+      {% endfor %}
+    </div>
+    {% else %}
+    <div class="no-posts">
+      // nenhum post ainda — empurre seus primeiros arquivos .md para _posts/
+    </div>
+    {% endif %}
+
+  </div>
+</div>
