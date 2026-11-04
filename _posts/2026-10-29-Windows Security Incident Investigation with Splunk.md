@@ -114,7 +114,7 @@ A existência de várias falhas próximas umas das outras foi utilizada como o p
 É importante destacar que várias falhas de autenticação, isoladamente, não significam necessariamente um ataque. Em um ambiente real, seria necessário considerar o usuário, horário, origem, frequência e contexto da atividade.
 
 <div class="photo" id="FailedAuthentication">
-  <img src="{{ '/assets/Images/Screenshots SOC N1/splunk-searches/failed-authentication-analysis.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-security-incident-investigation/splunk-searches/failed-authentication-analysis.png' | relative_url }}"
        alt="Failed authentication evidence">
 </div>
 
@@ -164,7 +164,7 @@ O resultado confirmou que uma nova conta chamada `helpdesk` havia sido criada.
 O evento também mostrou que a ação foi realizada pelo usuário `vboxuser`, o que é uma informação importante para a investigação porque estabelece uma relação entre o usuário que executou a ação e a conta recém-criada. A partir desse momento, a investigação deixou de estar concentrada apenas nas falhas de autenticação e passou a acompanhar as ações realizadas com a nova conta.
 
 <div class="photo" id="HPDCreated">
-  <img src="{{ '/assets/Images/Screenshots SOC N1/splunk-searches/helpdesk-account-created.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-security-incident-investigation/splunk-searches/helpdesk-account-created.png' | relative_url }}"
        alt="Account creation evidence">
 </div>
 ---
@@ -214,7 +214,7 @@ Nesse ponto, ainda não havia evidência suficiente para considerar a atividade 
 Mesmo assim, ela fazia parte da sequência de eventos que estava sendo investigada.
 
 <div class="photo" id="HPDUser">
-  <img src="{{ '/assets/Images/Screenshots SOC N1/splunk-searches/helpdesk-users-group.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-security-incident-investigation/splunk-searches/helpdesk-users-group.png' | relative_url }}"
        alt="Account added to Users group">
 </div>
 
@@ -244,7 +244,7 @@ Adição ao grupo Administrators
 ```
 
 <div class="photo" id="HPDAdmin">
-  <img src="{{ '/assets/Images/Screenshots SOC N1/splunk-searches/helpdesk-added-to-administrators.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-security-incident-investigation/splunk-searches/helpdesk-added-to-administrators.png' | relative_url }}"
        alt="Account added to Administrators group">
 </div>
 
@@ -285,7 +285,7 @@ net user helpdesk
 Também foram observados comandos `net1.exe` correspondentes aos comandos executados através de `net.exe`. Esses eventos foram particularmente importantes porque permitiram observar não apenas o resultado da alteração, mas também o comando utilizado para realizá-la.
 
 <div class="photo" id="HPDCommands">
-  <img src="{{ '/assets/Images/Screenshots SOC N1/splunk-searches/helpdesk-process-correlation.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-security-incident-investigation/splunk-searches/helpdesk-process-correlation.png' | relative_url }}"
        alt="Sysmon events containing commands related to `helpdesk`.">
 </div>
 
@@ -342,7 +342,7 @@ SOC-WIN10\vboxuser
 A combinação dessas evidências tornou o cenário muito mais significativo do que qualquer evento isolado.O ponto principal da investigação não foi simplesmente encontrar um Event ID específico, mas conectar eventos diferentes e entender como eles se relacionavam temporalmente.
 
 <div class="photo" id="Timeline">
-  <img src="{{ '/assets/Images/Screenshots SOC N1/splunk-searches/incident-timeline.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-security-incident-investigation/splunk-searches/incident-timeline.png' | relative_url }}"
        alt="incident timeline">
 </div>
 ---
@@ -370,7 +370,7 @@ Helpdesk Account Activity
 A intenção não foi criar um dashboard extremamente sofisticado, mas sim construir uma visão rápida dos eventos relevantes para o incidente. Essa abordagem é importante em um ambiente SOC porque um analista precisa conseguir visualizar rapidamente as principais informações antes de aprofundar a investigação.
 
 <div class="photo" id="Dashboards">
-  <img src="{{ '/assets/Images/Screenshots SOC N1/splunk-searches/incident-investigation-dashboard.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-security-incident-investigation/splunk-searches/incident-investigation-dashboard.png' | relative_url }}"
        alt="Dashboards with four panels included">
 </div>
 

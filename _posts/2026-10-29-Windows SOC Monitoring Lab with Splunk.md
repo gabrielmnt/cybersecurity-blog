@@ -51,7 +51,7 @@ http://localhost:8000
 A partir da interface Web é possível realizar pesquisas, visualizar eventos, configurar a ingestão de dados e posteriormente construir dashboards.
 
 <div class="photo" id="SCRinterface">
-  <img src="{{ '/assets/Images/Screenshots SOC Monitoring Lab/splunk-search-interface.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-soc-monitoring-lab/splunk-search-interface.png' | relative_url }}"
        alt="Search Interface Splunk">
 </div>
 
@@ -94,7 +94,7 @@ Applications and Services Logs
 ```
 
 <div class="photo" id="EventViewer">
-  <img src="{{ '/assets/Images/Screenshots SOC Monitoring Lab/sysmon-installed-eventviewer.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-soc-monitoring-lab/sysmon-installed-eventviewer.png' | relative_url }}"
        alt="Event viewer">
 </div>
 
@@ -133,7 +133,7 @@ O primeiro problema estava relacionado à configuração do `outputs.conf`. O en
 Foi necessário identificar qual interface da máquina principal deveria ser utilizada pela comunicação com a máquina virtual, atualizar a configuração e após a alteração, o encaminhamento dos eventos passou a funcionar.
 
 <div class="photo" id="outputs">
-  <img src="{{ '/assets/Images/Screenshots SOC Monitoring Lab/Outputs.conf.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-soc-monitoring-lab/Outputs.conf.png' | relative_url }}"
        alt="Outputs config">
 </div>
 
@@ -218,7 +218,7 @@ WinEventLog:Application
 ```
 
 <div class="photo" id="MainEvents">
-  <img src="{{ '/assets/Images/Screenshots SOC Monitoring Lab/search-main-events.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-soc-monitoring-lab/search-main-events.png' | relative_url }}"
        alt="splunk search main events">
 </div>
 
@@ -248,7 +248,7 @@ Entre os eventos observados estavam:
 Esses eventos fornecem diferentes tipos de informações relacionadas à atividade do Windows, incluindo autenticação e atividades relacionadas a privilégios e grupos.
 
 <div class="photo" id="EventsbyCount">
-  <img src="{{ '/assets/Images/Screenshots SOC Monitoring Lab/eventcode-distribution.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-soc-monitoring-lab/eventcode-distribution.png' | relative_url }}"
        alt="EventID by number of occurrences">
 </div>
 
@@ -299,7 +299,7 @@ e:
 Isso confirmou que os dados não estavam sendo perdidos durante a coleta, eles simplesmente ainda estavam dentro da estrutura XML do evento.
 
 <div class="photo" id="EventStructure">
-  <img src="{{ '/assets/Images/Screenshots SOC Monitoring Lab/sysmon-event-structure.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-soc-monitoring-lab/sysmon-event-structure.png' | relative_url }}"
        alt="Expanded sysmon event">
 </div>
 
@@ -321,7 +321,7 @@ Nesse caso, a pesquisa procura os valores associados aos elementos XML `Image` e
 Essa distinção é importante em ambientes de SIEM, onde diferentes fontes de dados podem exigir diferentes níveis de parsing e normalização.
 
 <div class="photo" id="FieldExtraction">
-  <img src="{{ '/assets/Images/Screenshots SOC Monitoring Lab/field-extraction.md.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-soc-monitoring-lab/field-extraction.md.png' | relative_url }}"
        alt="Query results showing extracted fields">
 </div>
 
@@ -371,7 +371,7 @@ NT AUTHORITY\LOCAL SERVICE
 Essa relação entre usuário e processo é muito mais útil para uma análise de segurança do que simplesmente saber que determinado executável apareceu.
 
 <div class="photo" id="ProcessbyUser">
-  <img src="{{ '/assets/Images/Screenshots SOC Monitoring Lab/processes-by-user-query.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-soc-monitoring-lab/processes-by-user-query.png' | relative_url }}"
        alt="Query results showing User, Image and Account">
 </div>
 
@@ -398,7 +398,7 @@ Esse tipo de evento é particularmente interessante para um SOC porque múltipla
 Novamente, o evento isolado não determina que exista um ataque. O analista precisa considerar frequência, horário, usuário, origem e outros elementos do contexto.
 
 <div class="photo" id="FailLogon">
-  <img src="{{ '/assets/Images/Screenshots SOC Monitoring Lab/failed-logons-query.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-soc-monitoring-lab/failed-logons-query.png' | relative_url }}"
        alt="event 4625">
 </div>
 
@@ -425,7 +425,7 @@ Top 10 Executed Processes
 A organização foi pensada para apresentar primeiro os indicadores gerais, depois os eventos de autenticação e, por fim, informações sobre os hosts e processos.
 
 <div class="photo" id="Dashboards">
-  <img src="{{ '/assets/Images/Screenshots SOC Monitoring Lab/Dashboards.png' | relative_url }}"
+  <img src="{{ '/assets/Images/Screenshots windows-soc-monitoring-lab/Dashboards.png' | relative_url }}"
        alt="Dashboards">
 </div>
 
