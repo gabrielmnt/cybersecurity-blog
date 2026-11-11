@@ -50,7 +50,7 @@ Essa arquitetura permitiu reutilizar praticamente toda a infraestrutura criada n
 Não foi necessário instalar novamente o Splunk, configurar novamente o Universal Forwarder ou reconstruir a coleta de logs. O laboratório existente passou a funcionar como a infraestrutura de monitoramento utilizada durante a investigação.
 
 <div class="diagram">
-  <img src="{{ '/assets/images/diagrams/Architecture-PJR2.svg' | relative_url }}"
+  <img src="{{ '/assets/images/diagrams/Architecture.png' | relative_url }}"
        alt="SOC Monitoring Lab Architecture">
 </div>
 
