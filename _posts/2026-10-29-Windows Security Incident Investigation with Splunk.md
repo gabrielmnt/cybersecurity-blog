@@ -41,7 +41,7 @@ Para a investigação, foi reutilizada a infraestrutura desenvolvida no projeto 
 O laboratório é composto por uma máquina Windows 10 utilizada como host, onde está instalado o Splunk Enterprise, e uma máquina virtual Windows 10 denominada `SOC-WIN10`, onde estão instalados o Sysmon e o Splunk Universal Forwarder. O fluxo de coleta funciona da seguinte maneira:
 
 <div class="diagram">
-  <img src="{{ '/assets/images/diagrams/data-flow-PJR2.svg' | relative_url }}"
+  <img src="{{ '/assets/images/diagrams/data-flow-PJR2.png' | relative_url }}"
        alt="Data Flow">
 </div>
 

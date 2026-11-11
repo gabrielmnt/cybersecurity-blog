@@ -24,7 +24,7 @@ Na máquina virtual, o Sysmon seria utilizado para gerar uma telemetria mais det
 De forma simplificada, o fluxo ficou assim:
 
 <div class="diagram">
-  <img src="{{ '/assets/images/diagrams/data-flow-PJR1.svg' | relative_url }}"
+  <img src="{{ '/assets/images/diagrams/data-flow-PJR1.png' | relative_url }}"
        alt="Data Flow">
 </div>
 
@@ -33,7 +33,7 @@ A ideia é semelhante ao princípio utilizado em ambientes corporativos: endpoin
 ### Arquitetura do laboratório
 
 <div class="diagram">
-  <img src="{{ '/assets/images/diagrams/Architecture-PJR1.svg' | relative_url }}"
+  <img src="{{ '/assets/images/diagrams/Architecture.png' | relative_url }}"
        alt="SOC Monitoring Lab Architecture">
 </div>
 
